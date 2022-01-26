@@ -27,7 +27,7 @@ I want the user to look up other people's recipies by username and like and comm
 
 
 ## Additional information:
-Created by Ampersand and Dominick
+Created by Ampersand, Janice and Dominick
 
 ## App Demo
 https://github.com/chiangd233/Full-Stack-Web-App/
