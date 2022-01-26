@@ -1,4 +1,5 @@
 # Application Name
+BunBun
 
 ## Concept:
 Create a web application which allows users to create and account and post recipes of dishes that they took. The application will also allow the user to post photos. The application will also allow the user to look up other people's posting of dishes that they have cooked and like and comment on other people's posts.
