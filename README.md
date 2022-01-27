@@ -12,6 +12,9 @@ I want the user to update their ingredients/recipies as they cook  </br>
 I want the user to look up other people's recipies by username and like and comment </br>
 I want the user to save other people's recipies </br>
 
+## User Flow:
+![User Flow Diagram](/BunBun.svg)
+
 ## Wireframes:
 
 ## Technologies Used:
