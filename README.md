@@ -10,7 +10,7 @@ I want the user to create an account with a username and password for our applic
 I want the user to post recipes and photos of what they cook </br>
 I want the user to update their ingredients/recipes as they cook  </br>
 I want the user to look up other people's recipes </br>
-I want the user to be able to like and comment on other user's recipes
+I want the user to be able to like and comment on other user's recipes </br>
 I want the user to save other people's recipes </br>
 
 ## User Flow:
@@ -20,6 +20,13 @@ I want the user to save other people's recipes </br>
 ![ERD](./readmephotos/ERD.png)
 
 ## Wireframes:
+![Home Page](./readmephotos/HomePage.png)
+![Account Home Page](./readmephotos/AccountHomePage.png)
+![Recipe Page](./readmephotos/RecipePage.png)
+![User Profile](./readmephotos/UserProfile.png)
+![Another User](./readmephotos/AnotherUser.png)
+![User Saved/Personal Page](./readmephotos/UserSavedPersonal.png)
+![Recipe Edit](./readmephotos/RecipeEdit.png)
 
 ## Technologies Used:
     - Express
