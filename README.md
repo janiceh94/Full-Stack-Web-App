@@ -13,7 +13,7 @@ I want the user to look up other people's recipies by username and like and comm
 I want the user to save other people's recipies </br>
 
 ## User Flow:
-![User Flow Diagram](./readmephotos/BunBun.svg)
+![User Flow Diagram](./readmephotos/BunBun.png)
 
 ## Wireframes:
 
