@@ -7,13 +7,17 @@ Create a web application which allows users to create and account and post recip
 ## User Stories
 
 I want the user to create an account with a username and password for our application </br>
-I want the user to post recipies and photos of what they cook </br>
-I want the user to update their ingredients/recipies as they cook  </br>
-I want the user to look up other people's recipies by username and like and comment </br>
-I want the user to save other people's recipies </br>
+I want the user to post recipes and photos of what they cook </br>
+I want the user to update their ingredients/recipes as they cook  </br>
+I want the user to look up other people's recipes </br>
+I want the user to be able to like and comment on other user's recipes
+I want the user to save other people's recipes </br>
 
 ## User Flow:
-![User Flow Diagram](./readmephotos/BunBun.svg)
+![User Flow Diagram](./readmephotos/BunBun.)
+
+## Entity Relationship Diagram:
+![ERD](./readmephotos/ERD.)
 
 ## Wireframes:
 
@@ -31,7 +35,7 @@ I want the user to save other people's recipies </br>
 
 
 ## Additional information:
-Created by Ampersand, Janice and Dominick
+Developed by Ampersand, Janice and Dominick
 
 ## App Demo
 https://github.com/chiangd233/Full-Stack-Web-App/
