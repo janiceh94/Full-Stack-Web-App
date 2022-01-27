@@ -14,10 +14,10 @@ I want the user to be able to like and comment on other user's recipes
 I want the user to save other people's recipes </br>
 
 ## User Flow:
-![User Flow Diagram](./readmephotos/BunBun.)
+![User Flow Diagram](./readmephotos/BunBun.png)
 
 ## Entity Relationship Diagram:
-![ERD](./readmephotos/ERD.)
+![ERD](./readmephotos/ERD.png)
 
 ## Wireframes:
 
