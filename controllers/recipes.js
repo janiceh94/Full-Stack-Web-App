@@ -48,8 +48,12 @@ const edit = (req, res) => {
 
 // Create
 const createRecipe = (req, res) => {
-    db.Recipe.
+    db.Recipe.create(req.body, (err, createRecipe) => {
+        if(err) return res.send(err);
+        res.redirect('/recipes');
+    })
 }
+
 
 module.exports = {
     idx,
