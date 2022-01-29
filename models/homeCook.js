@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const homeCookSchema = new Schema ({
+const homecookSchema = new Schema ({
     name: {type: String},
     username: {type: String, required: true},
     email: {type: String},
@@ -10,7 +10,7 @@ const homeCookSchema = new Schema ({
 })
 
 // Model
-const Homecook = mongoose.model("Homecook", homeCookSchema)
+const Homecook = mongoose.model("Homecook", homecookSchema)
 
 // Export
 module.export = Homecook;

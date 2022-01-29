@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const recipeSchema = new Schema ({
     title: {type: String, required: [true, "You must provide a title to your recipe"]},
-    homeCook: {type: Schema.Types.ObjectId, ref: "Homecook"},
+    homeCook: {type: Schema.Types.ObjectId, ref: "homecook"},
     content: {type: String},
 })
 
