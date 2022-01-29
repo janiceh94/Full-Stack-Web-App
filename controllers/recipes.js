@@ -46,6 +46,10 @@ const edit = (req, res) => {
 
 // Update
 
+// Create
+const createRecipe = (req, res) => {
+    db.Recipe.
+}
 
 module.exports = {
     idx,
