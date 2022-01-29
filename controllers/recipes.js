@@ -39,7 +39,7 @@ const show = (req, res) => {
 
 //Edit
 const edit = (req, res) => {
-    db.Recipe.findbyId(req.params.id, (err, foundArticle) => {
+    db.Recipe.findbyId(req.params.id, (err, foundRecipe) => {
         if (err) res.send(err);
         const context = {recipes: foundRecipes};
         res.render("recipes/edit", context)
