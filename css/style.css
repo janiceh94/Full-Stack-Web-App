@@ -1,0 +1,74 @@
+/* Root Styles */
+/* Across all pages */
+
+:root {
+	--main-blue: #cafdff;
+	--main-black: black;
+	--main-red: #ff0000;
+}
+
+/* Body Styles */
+/* Across all pages */
+
+body {
+	background-color: var(--main-blue);
+}
+
+/* === Index.ejs Style === */
+
+/* Large BUNBUNS logo sizing and spacing */
+
+.large-logo {
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	top: 12vh;
+	width: 90vw;
+	z-index: 10;
+}
+
+/* Black box spacing */
+
+.black-box {
+	background-color: var(--main-black);
+	bottom: 0%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 75vH;
+	position: absolute;
+	width: 100vW;
+}
+
+/* Bun Spacing */
+
+.bun {
+	width: 25vW;
+	margin-top: 20vh;
+}
+
+/* Login Buttons styles and spacing */
+
+.button-div {
+	display: flex;
+	justify-content: space-between;
+	width: 90vW;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	color: var(--main-blue);
+	font-family: egizio-urw, serif;
+	font-style: normal;
+	font-size: 3em;
+	font-variant: small-caps;
+	font-weight: 400;
+}
+
+button:hover {
+	color: var(--main-red) !important;
+}
