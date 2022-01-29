@@ -22,9 +22,6 @@ const PORT = 3000;
 app.set('view engine', 'ejs');
 
 // Routes
-/* app.get('/', function(req, res) {
-    res.send('<h1>Hello World</h1>')
-    }); */
 app.get('/', (req, res) => {
     res.render('index');
 
