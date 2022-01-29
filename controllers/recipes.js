@@ -69,6 +69,13 @@ const createRecipe = (req, res) => {
     })
 }
 
+//Delete
+const destroy = (req, res) => {
+    db.Recipe.findByIdAndDelete(req.params.id, (err, deletedRecipe) => {
+        if(err) res.send(err);
+        res.redirect('/recipes');
+    });
+};
 
 
 module.exports = {
