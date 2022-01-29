@@ -9,8 +9,8 @@ mongoose
     )
     .catch((err) => console.log(`MongoDB connection FAILED :( Error: ${err})`));
 
-    module.export = {
+    module.exports = {
         homeCook: require("./homeCook"),
         comment: require("./comment"),
-        recipe: require("./recipe"),
+        recipe: require("./recipe")
     }
