@@ -20,13 +20,12 @@ I want the user to save other people's recipes </br>
 ![ERD](./readmephotos/ERD.png)
 
 ## Wireframes:
-![Home Page](./readmephotos/HomePage.png)
-![Account Home Page](./readmephotos/AccountHomePage.png)
-![Recipe Page](./readmephotos/RecipePage.png)
-![User Profile](./readmephotos/UserProfile.png)
-![Another User](./readmephotos/AnotherUser.png)
-![User Saved/Personal Page](./readmephotos/UserSavedPersonal.png)
-![Recipe Edit](./readmephotos/RecipeEdit.png)
+![Recipe Page](./readmephotos/Project II-03.png)
+![Home Page](./readmephotos/Project II-04.png)
+![Account Home Page](./readmephotos/Project II-05.png)
+![User Profile](./readmephotos/Project II-06.png)
+![Recipe Create](./readmephotos/Project II-07.png)
+
 
 ## Technologies Used:
     - Express
