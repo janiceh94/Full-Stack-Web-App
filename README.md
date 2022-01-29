@@ -2,7 +2,8 @@
 BUNBUNS
 
 ## Concept:
-Create a web application which allows users to create and account and post recipes of dishes that they took. The application will also allow the user to post photos. The application will also allow the user to look up other people's posting of dishes that they have cooked and like and comment on other people's posts.
+Create a web application that supports the development of recipes and the creation of an online community for homecooyks. On the BUNBUNS platform, users create recipes, share recipes along with photos, and follow other homecooks as they navigate the trials, tribulations, and celebrations inside the kitchen. Users have the ability to like and comment in an effort to provide constructive feedback on peer kitchen projects. </br>
+Future development will add features that allow users to generate grocery lists from recipes, save favorite recipes, live-stream cooking events, and search for recipes using advanced filters and tags.
 
 ## User Stories
 
