@@ -19,11 +19,9 @@ const idx = (req, res) => {
 
 // New
 const newRecipe = (req, res) => {
-    db.Recipe.find({}, (err, foundRecipes) => {
-        if (err) res.send(err);
-        const context = {recipes: foundRecipes};
-        res.render("recipes/new", context)
-    });
+    if (err) res.send(err);
+    const context = {recipes: foundRecipes};
+    res.render("recipes/new", context)
 };
 
 // Show
@@ -46,9 +44,14 @@ const edit = (req, res) => {
     });
 };
 
+// Update
+
+
 module.exports = {
     idx,
     newRecipe,
     show,
     edit,
+    update,
+    delete,
 }
