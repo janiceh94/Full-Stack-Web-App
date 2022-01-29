@@ -31,21 +31,16 @@ const postSchema = new Schema ({
     content: {type: String},
 })
 
-const likeSchema = new Schema ({
-    post: {type: Schema},
-    likes: {type: Schema}
-})
 
 // Model
 const User = mongoose.model("User", userSchema)
 const Comment = mongoose.model("Comment", commentSchema)
 const Post = mongoose.model("Post", postSchema)
-const Like = mongoose.model("Like", likeSchema)
+
 
 // Export
 module.export = {
     User,
     Comment,
     Post,
-    Like,
 };
