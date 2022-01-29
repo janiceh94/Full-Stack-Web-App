@@ -45,6 +45,21 @@ const edit = (req, res) => {
 };
 
 // Update
+const update = (req, res) => {
+    db.Recipe.findbyIdAndUpdate(
+        req.params.id,
+        {
+            $set: {
+                ...req.body,
+            },
+        },
+        {new: true},
+        (err, updatedRecipe) => {
+            if(err) res.send(err);
+            res.redirect(`/recipes/${updatedRecipe._id}`);
+        }
+    );
+};
 
 // Create
 const createRecipe = (req, res) => {
@@ -53,6 +68,7 @@ const createRecipe = (req, res) => {
         res.redirect('/recipes');
     })
 }
+
 
 
 module.exports = {
