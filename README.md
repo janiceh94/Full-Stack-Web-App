@@ -6,12 +6,17 @@ Create a web application which allows users to create and account and post recip
 
 ## User Stories
 
-I want the user to create an account with a username and password for our application </br>
-I want the user to post recipes and photos of what they cook </br>
-I want the user to update their ingredients/recipes as they cook  </br>
-I want the user to look up other people's recipes </br>
-I want the user to be able to like and comment on other user's recipes </br>
-I want the user to save other people's recipes </br>
+BUNBUNS wants the user to use Google Oauth to create a new account. </br>
+BUNBUNS wants the user to create and share recipes with names, yield, ingredient lists, preparation instructions, and photos. </br>
+BUNBUNS wants the user to be able to comment and like to provide feedback on other user recipes. </br>
+BUNBUNS wants the user to update their recipes as they tweak and revise their recipes. </br>
+BUNBUNS wants the user to follow other homecooks. </br>
+BUNBUNS wants the user to search for and cook other people's recipes. </br>
+Stretch Goals </br>
+BUNBUNS wants the user to save other people's recipes. </br>
+BUNBUNS wants the user to be able to livestream while cooking and testing recipes.</br>
+BUNBUNS wants the user to generate a grocery list from recipes they plan to cooks.</br>
+BUNBUNS wants the user to have more control in searching for the types of recipes they desire to make. </br>
 
 ## User Flow:
 ![User Flow Diagram](./readmephotos/BunBun.png)
