@@ -85,5 +85,5 @@ module.exports = {
     edit,
     update,
     createRecipe,
-    delete: destroy,
+    deleteRecipe: destroy,
 }
