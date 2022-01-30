@@ -1,4 +1,15 @@
 {
+    "name": "Full-Stack-Web-App",
+    "version": "1.0.0",
+    "description": "Bunbun",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "open http://localhost:3000 & nodemon"
+    },
+    "keywords": [
+        "recipes"
+    ],
   "dependencies": {
     "dotenv": "^14.3.2",
     "ejs": "^3.1.6",
