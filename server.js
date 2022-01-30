@@ -16,8 +16,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"))
 
-// Port
-const PORT = 3000;
 
 // App Configurations
 app.set('view engine', 'ejs');
@@ -31,7 +29,7 @@ app.get('/', (req, res) => {
 
 })
 // Listener
-app.listen(PORT, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log(`Server is live on http://localhost: ${PORT}`);
 })
 module.exports.app;
