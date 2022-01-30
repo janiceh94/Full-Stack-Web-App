@@ -1,3 +1,4 @@
 module.exports = {
-    authors: require("./recipes")
+    recipes: require("./recipes"),
+    homecook: require("./homecook")
 }

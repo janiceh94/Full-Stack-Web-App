@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const homecookSchema = new Schema ({
     name: {type: String},
+    googleId: {type: String},
     username: {type: String, required: true},
     email: {type: String},
     recipe: {type: Schema.Types.ObjectId, ref: "Recipe"},
