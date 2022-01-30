@@ -5,7 +5,7 @@ const methodOverride = require('method-override');
 
 // Internal Modules
 const routes = require('./routes');
-
+const PORT = process.env.PORT || 3000
 // Instanced Module
 const app = express();
 
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 })
 // Listener
-app.listen(process.env.PORT || 3000, function () {
+app.listen(PORT, function () {
     console.log(`Server is live on http://localhost: ${PORT}`);
 })
 module.exports.app;
