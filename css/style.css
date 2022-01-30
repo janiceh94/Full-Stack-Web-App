@@ -1,4 +1,4 @@
-/* Root Styles */
+/* === Root Styles === */
 /* Across all pages */
 
 :root {
@@ -12,6 +12,51 @@
 
 body {
 	background-color: var(--main-blue);
+}
+
+/* === Navigation === */
+/* Navigation Spacing */
+
+nav {
+	background-color: var(--main-blue);
+	height: 150px;
+}
+
+/* Logo Spacing */
+
+.logo-with-bun{ 
+	position: absolute;
+	padding-left: 5vW;
+	top: 18px;
+	z-index: 10;
+}
+
+.black-nav {
+	background-color: var(--main-black);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 90vw;
+	padding-left: 5vW;
+	padding-right: 5vW;
+	height: 100px;
+	position: relative;
+	top: 50px;
+}
+
+/* Navigation buttons */
+
+.nav-buttons {
+	color: var(--main-blue);
+	font-family: hegante, sans-serif;
+	font-weight: 900;
+	font-size: 3em;
+	font-style: normal;
+	font-variant: small-caps;
+}
+
+.nav-buttons:hover {
+	color: var(--main-red) !important;
 }
 
 /* === Index.ejs Style === */
