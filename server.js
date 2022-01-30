@@ -14,8 +14,10 @@ const app = express();
     // Requires
 require("./config/database");
 require("./config/passport");
+const indexRoute = require('./routes/index');
+const homeRoute = require('./routes/homecook');
 
-
+app.set('view engine', 'ejs');
 // Middleware
 //app.use("/", routes.index);
 app.use(express.static("public"));
@@ -34,9 +36,10 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+app.use('/', indexRoute);
+app.use('/', homeRoute);
 // App Configurations
-app.set('view engine', 'ejs');
+
 
 
 // Listener
