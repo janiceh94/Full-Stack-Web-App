@@ -1,5 +1,5 @@
 module.exports = {
-        Homecook: require("./homecook"),
-        Comment: require("./comment"),
-        Recipe: require("./recipe")
-    }
+    Homecook: require("./Homecook"),
+    Comment: require("./Comment"),
+    Recipe: require("./Recipe")
+}

@@ -24,6 +24,14 @@ const newRecipe = (req, res) => {
     res.render("recipes/new", context)
 };
 
+// Create
+const createRecipe = (req, res) => {
+    db.Recipe.create(req.body, (err, createRecipe) => {
+        if(err) return res.send(err);
+        res.redirect('/recipes');
+    })
+}
+
 // Show
 const show = (req, res) => {
     db.Recipe.findbyId(req.params.id)
@@ -45,6 +53,29 @@ const edit = (req, res) => {
 };
 
 // Update
+const update = (req, res) => {
+    db.Recipe.findbyIdAndUpdate(
+        req.params.id,
+        {
+            $set: {
+                ...req.body,
+            },
+        },
+        {new: true},
+        (err, updatedRecipe) => {
+            if(err) res.send(err);
+            res.redirect(`/recipes/${updatedRecipe._id}`);
+        }
+    );
+};
+
+//Delete
+const destroy = (req, res) => {
+    db.Recipe.findByIdAndDelete(req.params.id, (err, deletedRecipe) => {
+        if(err) res.send(err);
+        res.redirect('/recipes');
+    });
+};
 
 
 module.exports = {
@@ -53,5 +84,6 @@ module.exports = {
     show,
     edit,
     update,
-    delete,
+    createRecipe,
+    delete: destroy,
 }
