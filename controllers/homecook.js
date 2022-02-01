@@ -10,4 +10,6 @@ function index(req, res, next) {
     });
 }
 
-module.export = index;
+module.exports = {
+  index
+};
