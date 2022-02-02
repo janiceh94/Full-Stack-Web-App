@@ -1,6 +1,6 @@
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
-const homecook = require ("../models/Homecook")
+const Homecook = require ("../models/Homecook")
 
 
 passport.use(
@@ -19,6 +19,7 @@ passport.use(
                 // we have a new student via OAuth!
                 const newHomecook = new Homecook({
                     name: profile.displayName,
+                    username: profile.displayName,
                     email: profile.emails[0].value,
                     googleId: profile.id,
                 });
@@ -33,7 +34,7 @@ passport.use(
   );
 
 passport.serializeUser(function(homecook, done) {
-    done(null, homeCook.id);
+    done(null, homecook.id);
 });
 passport.deserializeUser(function (id, done) {
     Homecook.findById(id, function (err, homecook) {
