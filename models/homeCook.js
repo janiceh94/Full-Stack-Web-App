@@ -14,4 +14,4 @@ const homecookSchema = new Schema ({
 const Homecook = mongoose.model("Homecook", homecookSchema)
 
 // Export
-module.export = Homecook;
+module.exports = Homecook;
