@@ -11,4 +11,4 @@ const recipeSchema = new Schema ({
 const Recipe = mongoose.model("Recipe", recipeSchema)
 
 // Export
-module.export = Recipe;
+module.exports = Recipe;
