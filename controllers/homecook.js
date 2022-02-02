@@ -10,31 +10,31 @@ function index(req, res, next) {
     });
 }
 
-//Edit
-// const editDescription = (req, res) => {
-//   db.Homecook.findbyId(req.params.id, (err, editDescription) => {
-//       if (err) res.send(err);
-//       const context = {recipes: editDescription};
-//       res.render("homecook/edit", context)
-//   });
-// };
+// Edit
+const editDescription = (req, res) => {
+  db.Homecook.findbyId(req.params.id, (err, editDescription) => {
+      if (err) res.send(err);
+      const context = {recipes: editDescription};
+      res.render("homecooks/edit", context)
+  });
+};
 
 // Update
-// const updateDescription = (req, res) => {
-//   db.Homecook.findbyIdAndUpdate(
-//       req.params.id,
-//       {
-//           $set: {
-//               ...req.body,
-//           },
-//       },
-//       {new: true},
-//       (err, updatedDescription) => {
-//           if(err) res.send(err);
-//           res.redirect(`/recipes/${updatedRecipe._id}`);
-//       }
-//   );
-// };
+const updateDescription = (req, res) => {
+  db.Homecook.findbyIdAndUpdate(
+      req.params.id,
+      {
+          $set: {
+              ...req.body,
+          },
+      },
+      {new: true},
+      (err, updatedDescription) => {
+          if(err) res.send(err);
+          res.redirect(`/homecooks/${updatedDescription._id}`);
+      }
+  );
+};
 
 module.exports = {
   index
