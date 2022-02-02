@@ -15,6 +15,24 @@ body {
 	margin: 0px;
 }
 
+p {
+	font-family: egizio-urw-condensed, serif;
+	font-size: 2em;
+	font-variant: small-caps;
+	margin: 0px;
+}
+
+/* Font Styles */
+/* Across all pages */
+
+h3 {
+	font-family: hegante, sans-serif;
+	font-size: 30px;
+	font-variant: small-caps;
+	margin-bottom: 1vW;
+	margin-top: 0px;
+}
+
 /* === Navigation === */
 /* Navigation Spacing */
 
@@ -139,4 +157,66 @@ button {
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
+}
+
+/* === RECIPES VIEWSStyle === */
+/* === new.ejs Style === */
+
+/* name and number of recipes */
+
+.homecook-name {
+	margin-left: 3vW;
+	margin-bottom: 3vW;
+}
+
+/* form styles */
+/* short answer */
+
+.short-answer {
+	width: 30vW;
+}
+
+input {
+	
+	background-color: transparent;
+	border: solid 1px;
+	margin-bottom: 0px;
+	padding: 10px 10px 7px 10px;
+	width: 28vW;
+}
+
+::placeholder {
+	color: black;
+	font-family: egizio-urw-condensed, serif;
+	font-size: 2em;
+	font-variant: small-caps;
+	padding: 0px;
+}
+
+/* long answer */
+
+.long-answer {
+	width: 30vW;
+}
+
+textarea {
+	background-color: transparent;
+	border: solid 1px;
+	height: 40vH;
+	padding: 10px;
+	width: 28vW;
+}
+
+textarea p {
+	color: black;
+	font-family: egizio-urw-condensed, serif;
+	font-size: 2em;
+	padding: 0px;
+}
+
+.recipe-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0vW 3vW 0vW 3vW;
 }
