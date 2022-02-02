@@ -6,7 +6,6 @@ const Homecook = require ("../models/Homecook")
 
 passport.use(
 
-    console.log(callbackURL);
     new GoogleStrategy(
         {
             clientID: process.env.GOOGLE_CLIENT_ID,
