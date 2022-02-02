@@ -7,10 +7,10 @@ function isLoggedIn(req, res, next) {
     res.redirect("/auth/google");
   }
 
-router.get("/homecook", isLoggedIn, homecookCtrl.index);
+router.get("/homecooks", isLoggedIn, homecookCtrl.index);
 
-router.post("/recipe", isLoggedIn, recipeCtrl.newRecipe);
+router.post("/recipes", isLoggedIn, recipeCtrl.newRecipe);
 
-router.delete("/recipe/:id", isLoggedIn, recipeCtrl.deleteRecipe);
+router.delete("/recipes/:id", isLoggedIn, recipeCtrl.deleteRecipe);
 
 module.exports = router;
