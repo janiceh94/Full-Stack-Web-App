@@ -6,5 +6,26 @@
 </head>
 <body>
 	<%- include ('../partials/nav.ejs') %>
+	<form action="/recipes/<%= recipe._id%>?_method=PUT" method="POST">
+		<div class="recipe-form">
+			<div class="short-answer">
+				<h3>recipe name</h3>
+				<input type="text" name="recipe-name" value="<%=recipe.name %>">
+				<h3>yield</h3>
+				<input type="text" name="yield" placeholder="<%=recipe.yield %>">
+				<h3>photo</h3>
+				<input type="text" name="photo" placeholder="<%=recipe.photo %>">
+			</div>
+			<div class="long-answer">
+				<h3>ingredients</h3>
+				<textarea type="text" name="ingredients"><%=recipe.instructions %></textarea>
+			</div>
+			<div class="long-answer">
+				<h3>preparation</h3>
+				<textarea name="preparation"><%=author.preparation %></textarea>
+			</div>
+		</div>
+		<input type="submit" value="Update">
+	</form>
 </body>
 </html>
