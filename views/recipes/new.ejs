@@ -6,5 +6,30 @@
 </head>
 <body>
 	<%- include ('./partials/nav.ejs') %>
+	<div class="homecook-name">
+		<h1>Ampersand Paris</h1>
+		<p>15 recipes</p>
+	</div>
+	<form method="get">
+		<div class="recipe-form">
+			<div class="short-answer">
+				<h3>recipe name</h3>
+				<input type="text" name="recipe-name" placeholder="name...">
+				<h3>yield</h3>
+				<input type="text" name="yield" placeholder="yield...">
+				<h3>photo</h3>
+				<input type="text" name="photo" placeholder="upload...">
+			</div>
+			<div class="long-answer">
+				<h3>ingredients</h3>
+				<textarea type="text" name="ingredients">list of ingredients...</textarea>
+			</div>
+			<div class="long-answer">
+				<h3>preparation</h3>
+				<textarea name="preparation">methods, preparations, & recipe notes...</textarea>
+			</div>
+		</div>
+		<input type="submit" value="Submit">
+	</form>
 </body>
 </html>
