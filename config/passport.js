@@ -3,14 +3,19 @@ const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const Homecook = require ("../models/Homecook")
 
 
+
 passport.use(
+
+    console.log(callbackURL);
     new GoogleStrategy(
         {
             clientID: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_SECRET,
             callbackURL: process.env.GOOGLE_CALLBACK,
         },
+        
         function (accessToken, refreshToken, profile, cb) {
+            
             Homecook.findOne({ googleId: profile.id }, function (err, homecook) {
                 if (err) return cb(err);
                 if (homecook) {
@@ -27,12 +32,15 @@ passport.use(
                     if (err) return cb(err);
                     return cb(null, newHomecook);
                 });
+                
             }
+        
         });
+        
       }
     )
   );
-
+  
 passport.serializeUser(function(homecook, done) {
     done(null, homecook.id);
 });
