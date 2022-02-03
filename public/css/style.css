@@ -220,3 +220,43 @@ textarea p {
 	justify-content: space-between;
 	margin: 0vW 3vW 0vW 3vW;
 }
+
+/* === index.ejs Style === */
+
+.recipe-collection {
+	background-color: var(--main-black);
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	width: 94vW;
+	height: 100vH;
+	padding: 3vW 5vW 3vW 3vW;
+}
+
+.recipe-card {
+	height: 28vW;
+	width: 28vW;
+	overflow: hidden;
+	background-color: var(--main-blue);
+	padding: 1vW;
+}
+
+.recipe-image {
+	width: 28vW;
+	min-height: 28vW;	
+	max-height: 100%;
+	display: none;
+}
+
+.recipe-description {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	color: var(--main-red);
+}
+
+.recipe-description h3 {
+	font-size: 3em !important;
+	
+}
