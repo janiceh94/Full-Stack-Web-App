@@ -96,6 +96,13 @@ nav {
 	width: 40px;
 }
 
+#logout {
+	position: absolute;
+	right: 20vW;
+	top: 5px;
+	width: 40px;
+}
+
 /* === Index.ejs Style === */
 
 /* Body spacing */
