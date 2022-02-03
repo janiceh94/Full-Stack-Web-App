@@ -40,8 +40,8 @@ const show = (req, res) => {
         .populate("recipes")
         .exec((err, foundRecipe) => {
             if (err) res.send(err);
-            const context = {recipes: foundRecipes};
-            res.render("recipes/show", context)
+            const context = {recipes: foundRecipe};
+            res.render(`recipes/show`, context)
         })
 }
 
