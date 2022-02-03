@@ -16,6 +16,7 @@ require("./config/database");
 require("./config/passport");
 const indexRoute = require('./routes/index');
 const homeRoute = require('./routes/homecook');
+const recipeRoute = require('./routes/recipe');
 
 app.set('view engine', 'ejs');
 // Middleware
@@ -38,6 +39,8 @@ app.use(passport.session());
 
 app.use('/', indexRoute);
 app.use('/', homeRoute);
+app.use('/', recipeRoute);
+
 // App Configurations
 
 
