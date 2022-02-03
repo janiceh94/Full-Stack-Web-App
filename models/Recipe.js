@@ -5,7 +5,7 @@ const recipeSchema = new Schema ({
     name: {type: String, required: [true, "You must provide a title to your recipe"]},
     yield: {type: Number},
     photo: {type: String},
-    instructions: {type:String},
+    ingredients: {type:String},
     preparation: {type: String},
     homeCook: {type: Schema.Types.ObjectId, ref: "homecook"},
 },{
