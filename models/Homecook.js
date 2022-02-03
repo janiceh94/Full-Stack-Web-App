@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const factSchema = new moongoose.Schema({
+const factSchema = new mongoose.Schema({
     text: String
 });
 
@@ -10,7 +10,7 @@ const homecookSchema = new Schema ({
     googleId: {type: String},
     username: {type: String, required: true},
     email: {type: String},
-    facts: [factSchema],
+    facts: {type: String},
     recipe: {type: Schema.Types.ObjectId, ref: "Recipe"},
     comments: {type: Schema.Types.ObjectId, ref: "Comment"},
 })

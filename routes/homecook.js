@@ -9,9 +9,9 @@ function isLoggedIn(req, res, next) {
 
 router.get("/homecooks", isLoggedIn, homecookCtrl.index);
 
-router.get('/homecooks/:id', isLoggedIn, homecookCtrl.showHomecook);
+router.get('/homecooks/show', isLoggedIn, homecookCtrl.showHomecook);
 
-router.get('/homecooks/:id/edit', isLoggedIn, homecookCtrl.editHomecook);
+router.get('/homecooks/edit', isLoggedIn, homecookCtrl.editHomecook);
 
 router.post("/facts", isLoggedIn, homecookCtrl.editHomecook);
 
