@@ -8,20 +8,25 @@
 	<%- include ('../partials/nav.ejs') %>
 </body>
 <div class="recipe-collection">
-	<div class="recipe-card">
+	<% if(!recipes.length) { &>
+	<h1>No recipes have been created. Time to get cookin' !</h1>
+	<% } %>
+	<% recipes.forEach(recipe => { %>
+	<a href="/recipes/<%= recipe.id %>"><div class="recipe-card">
 		<div>
-			<img class="recipe-image" src="./Images/Chicken Curry.jpeg">
+			<img class="recipe-image" src="<%= recipe.photo %>">
 		</div>
 		<div class="recipe-description">
 			<div class="recipe-card-top">
-				<h3>chicken curry</h3>
-				<p>yields 4 servings</p>
+				<h3><%= recipe.name %></h3>
+				<p><%= recipe.yield %></p>
 			</div>
 			<div class="recipe-card-bottom">
-				<p>ampersand paris</p>
-				<p>12.12.12</p>
+				<p><%= recipe.homecook %></p>
+				<p><%= recipe.timestamp %></p>
 			</div>
 		</div>
-	</div>
+	</div></a>
+	<% }) %>
 </div>
 </html>
