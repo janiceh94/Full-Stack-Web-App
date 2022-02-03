@@ -36,20 +36,18 @@ const createRecipe = (req, res) => {
 
 // Show
 const show = (req, res) => {
-    db.Recipe.findById(req.params.id)
-        .populate("recipes")
-        .exec((err, foundRecipe) => {
-            if (err) res.send(err);
-            const context = {recipes: foundRecipe};
-            res.render(`recipes/show`, context)
-        })
+    db.Recipe.findById(req.params.id, (err, foundRecipe) => {
+        if(err) return res.send(err);
+        const context = {recipe: foundRecipe};
+        res.render('recipes/show', context);
+    })
 }
 
 //Edit
 const edit = (req, res) => {
     db.Recipe.findById(req.params.id, (err, foundRecipe) => {
         if (err) res.send(err);
-        const context = {recipes: foundRecipes};
+        const context = {recipe: foundRecipes};
         res.render("recipes/edit", context)
     });
 };
