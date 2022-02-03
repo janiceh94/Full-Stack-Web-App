@@ -2,9 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const recipeSchema = new Schema ({
-    title: {type: String, required: [true, "You must provide a title to your recipe"]},
-    homecook: {type: Schema.Types.ObjectId, ref: "homecook"},
-    content: {type: String},
+    name: {type: String, required: [true, "You must provide a title to your recipe"]},
+    yield: {type: Number},
+    photo: {type: String},
+    instructions: {type:String},
+    preparation: {type: String},
+    homeCook: {type: Schema.Types.ObjectId, ref: "homecook"},
 })
 
 // Model
