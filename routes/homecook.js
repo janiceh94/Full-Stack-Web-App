@@ -9,8 +9,14 @@ function isLoggedIn(req, res, next) {
 
 router.get("/homecooks", isLoggedIn, homecookCtrl.index);
 
-router.post("/facts", isLoggedIn, homecookCtrl.editDescription);
+router.get('/homecooks/:id', isLoggedIn, homecookCtrl.showHomecook);
 
-router.delete("/facts/:id", isLoggedIn, homecookCtrl.updateDescription);
+router.get('/homecooks/:id/edit', isLoggedIn, homecookCtrl.editHomecook);
+
+router.post("/facts", isLoggedIn, homecookCtrl.editHomecook);
+
+router.put('/homecooks/:id', isLoggedIn, homecookCtrl.updateHomecook);
+
+
 
 module.exports = router;
