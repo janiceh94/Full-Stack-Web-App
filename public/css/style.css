@@ -22,6 +22,15 @@ p {
 	margin: 0px;
 }
 
+h1 {
+	color: var(--main-red);
+	font-family: hegante, sans-serif;
+	font-size: 3em;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+}
+
+
 /* Font Styles */
 /* Across all pages */
 
@@ -235,19 +244,21 @@ textarea p {
 .recipe-collection {
 	background-color: var(--main-black);
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: center;
 	width: 94vW;
-	height: 100vH;
+	height: 100%;
 	padding: 3vW 5vW 3vW 3vW;
 }
 
 .recipe-card {
 	height: 28vW;
-	width: 28vW;
+	width: 27vW;
 	overflow: hidden;
 	background-color: var(--main-blue);
 	padding: 1vW;
+	margin-top: 3vW;
 }
 
 .recipe-image {
