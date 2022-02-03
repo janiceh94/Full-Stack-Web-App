@@ -78,6 +78,15 @@ nav {
 	color: var(--main-red) !important;
 }
 
+/* Logout Button */
+
+#logout-button {
+	position: absolute;
+	right: 5vW;
+	top: 5px;
+	width: 40px;
+}
+
 /* === Index.ejs Style === */
 
 /* Body spacing */
@@ -334,3 +343,4 @@ li {
 	padding: 1vW;
 	border-left: solid black 1px;
 }
+

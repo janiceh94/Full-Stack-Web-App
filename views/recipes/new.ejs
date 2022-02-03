@@ -7,8 +7,8 @@
 <body>
   <%- include ('../partials/nav.ejs') %>
 	<div class="homecook-name">
-		<h1>Ampersand Paris</h1>
-		<p>15 recipes</p>
+		<h1><%= homecook.name %></h1>
+		<p><%= homecook.recipe.length %></p>
 	</div>
 	<form action="/recipes" method="POST">
 		<div class="recipe-form">
