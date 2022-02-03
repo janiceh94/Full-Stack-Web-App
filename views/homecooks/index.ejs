@@ -6,5 +6,19 @@
 </head>
 <body>
 	<%- include ('../partials/nav.ejs') %>
+	<div class="user-profile">
+		<div class="user-description">
+			<div class="user-header">
+				<h3><%= homecook.name %></h3>
+				<p><%= homecook.facts %></p>
+			</div>
+			<% homecook.forEach(recipe => { %>
+				<div class="recipe-description">
+					<div class="recipe-card-top">
+						<h3><%= homecook.recipe.name %></h3>
+					</div>
+				</div>
+			<% }) %>
+	</div>
 </body>
 </html>
