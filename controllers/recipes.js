@@ -19,9 +19,11 @@ const idx = (req, res) => {
 
 // New
 const newRecipe = (req, res) => {
-    if (err) res.send(err);
-    const context = {recipes: foundRecipes};
-    res.render("recipes/new", context)
+    db.Recipe.find({}, (err, foundRecipe) => {
+        if (err) res.send (err);
+        const context = {recipes: foundRecipe};
+        res.render("recipes/new", context)
+    });
 };
 
 // Create
@@ -34,18 +36,18 @@ const createRecipe = (req, res) => {
 
 // Show
 const show = (req, res) => {
-    db.Recipe.findbyId(req.params.id)
+    db.Recipe.findById(req.params.id)
         .populate("recipes")
         .exec((err, foundRecipe) => {
             if (err) res.send(err);
-            const context = {recipes: foundRecipes};
-            res.render("recipes/show", context)
+            const context = {recipes: foundRecipe};
+            res.render(`recipes/show`, context)
         })
 }
 
 //Edit
 const edit = (req, res) => {
-    db.Recipe.findbyId(req.params.id, (err, foundRecipe) => {
+    db.Recipe.findById(req.params.id, (err, foundRecipe) => {
         if (err) res.send(err);
         const context = {recipes: foundRecipes};
         res.render("recipes/edit", context)
@@ -54,7 +56,7 @@ const edit = (req, res) => {
 
 // Update
 const update = (req, res) => {
-    db.Recipe.findbyIdAndUpdate(
+    db.Recipe.findByIdAndUpdate(
         req.params.id,
         {
             $set: {
