@@ -6,5 +6,13 @@
 </head>
 <body>
 	<%- include ('../partials/nav.ejs') %>
+	<form action="/recipes/<%= homecook._id%>?_method=PUT" method="POST">
+		<div class="recipe-form">
+			<div class="long-answer">
+				<h3>Add a description about yourself!</h3>
+				<input type="text" name="homecook-description" value="<%=homecook.facts %>">
+			</div>
+		</div>
+		<input type="submit" value="Update">
 </body>
 </html>
