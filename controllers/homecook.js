@@ -12,14 +12,14 @@ function index(req, res, next) {
 
 // Show
 const showHomecook = (req, res) => {
-    Homecook.findbyId(req.params.id)
-        .populate("homecooks")
-        .exec((err, foundRecipe) => {
-            if (err) res.send(err);
-            const context = {homecooks: foundHomecook};
-            res.render("homecooks/show", context)
-        })
-}
+  Homecook.findbyId(req.params.id)
+      .populate("homecooks")
+      .exec((err, foundHomecook) => {
+          if (err) res.send(err);
+          const context = {homecook: foundHomecook};
+          res.render("homecooks/show", context)
+  })
+} 
 
 // Edit
 const editHomecook = (req, res) => {
