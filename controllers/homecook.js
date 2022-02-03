@@ -2,24 +2,24 @@ const Homecook = require("../models/Homecook")
 
 // Google oath
 function index(req, res, next) {
-    Homecook.find({}, function(err, homecook) {
+    Homecook.find({}, function(err, homecooks) {
      res.render('homecooks/index', {
-      homecook,
+      homecooks,
       user: req.user
       });
     });
-}
+} 
 
 // Show
 const showHomecook = (req, res) => {
-    Homecook.findbyId(req.params.id)
-        .populate("homecooks")
-        .exec((err, foundRecipe) => {
-            if (err) res.send(err);
-            const context = {homecooks: foundHomecook};
-            res.render("homecooks/show", context)
-        })
-}
+  Homecook.findbyId(req.params.id)
+      .populate("homecooks")
+      .exec((err, foundHomecook) => {
+          if (err) res.send(err);
+          const context = {homecook: foundHomecook};
+          res.render("homecooks/show", context)
+  })
+} 
 
 // Edit
 const editHomecook = (req, res) => {
