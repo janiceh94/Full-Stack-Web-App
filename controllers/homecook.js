@@ -8,7 +8,7 @@ function index(req, res, next) {
       user: req.user
       });
     });
-}
+} 
 
 // Show
 const showHomecook = (req, res) => {
