@@ -12,10 +12,10 @@
 				<h3><%= homecooks.name %></h3>
 				<p><%= homecooks.facts %></p>
 			</div>
-			<% homecooks.forEach(recipe => { %>
+			<% homecooks.forEach(homecooks => { %>
 				<div class="recipe-description">
 					<div class="recipe-card-top">
-						<h3><%= recipe.name %></h3>
+						<h3><%= homecooks.name %></h3>
 					</div>
 				</div>
 			<% }) %>
