@@ -8,6 +8,8 @@ const recipeSchema = new Schema ({
     instructions: {type:String},
     preparation: {type: String},
     homeCook: {type: Schema.Types.ObjectId, ref: "homecook"},
+},{
+    timestamps: true
 })
 
 // Model

@@ -35,15 +35,6 @@ const createRecipe = (req, res) => {
 }
 
 // Show
-/* const show = (req, res) => {
-    db.Recipe.findById(req.params.id)
-        .populate("recipes")
-        .exec((err, foundRecipe) => {
-            if (err) res.send(err);
-            const context = {recipes: foundRecipe};
-            res.render(`recipes/show`, context)
-        })
-} */
 const show = (req, res) => {
     db.Recipe.findById(req.params.id, (err, foundRecipe) => {
         if(err) return res.send(err);
