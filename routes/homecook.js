@@ -13,7 +13,7 @@ router.get('/homecooks/show', isLoggedIn, homecookCtrl.showHomecook);
 
 router.get('/homecooks/edit', isLoggedIn, homecookCtrl.editHomecook);
 
-router.post("/facts", isLoggedIn, homecookCtrl.editHomecook);
+router.post("/homecooks", isLoggedIn, homecookCtrl.editHomecook);
 
 router.put('/homecooks/:id', isLoggedIn, homecookCtrl.updateHomecook);
 
