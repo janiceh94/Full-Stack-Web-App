@@ -8,18 +8,18 @@
 	<%- include ('../partials/nav.ejs') %>
 	<div class="homecook-header">
 		<div class = "homecook-header-name">
-			<h1><%= homecook.name %></h1>
-			<h3><%= homecook.email %></h3>
+			<h1><%= homecooks.name %></h1>
+			<h3><%= homecooks.email %></h3>
 		</div>
 	</br></br></br>
 		<div class="homecook-description">
-			<% if(!homecook.facts) { %>
+			<% if(!homecooks.facts) { %>
 				<h3>No description has been made. Add a description!</h3>
 			<% } %>
 			<% let array = []; %>
-			<% for (let i = 0; i < homecook.length; i++) { %>
+			<% for (let i = 0; i < homecooks.length; i++) { %>
 				<li>
-					<h3><%= homecook.facts[i] %></h3>
+					<h3><%= homecooks.facts[i] %></h3>
 				</li>
 			<% }; %>
 		</div>

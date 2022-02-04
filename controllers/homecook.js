@@ -19,11 +19,20 @@ const newDescription = (req, res) => {
   });
 };
 
+// Create
+
+const createDescription = (req, res) => {
+  Homecook.create(req.body, (err, createDescription) => {
+      if(err) return res.send(err);
+      res.redirect('/homecooks');
+  })
+}
+
 // Show
 const showHomecook = (req, res) => {
   Homecook.findById(req.params.id, (err, foundHomecook) => {
     if(err) return res.send(err);
-        const context = {homecook: foundHomecook};
+        const context = {homecooks: foundHomecook};
         res.render('homecooks/show', context);
   })
 } 
@@ -32,7 +41,7 @@ const showHomecook = (req, res) => {
 const editHomecook = (req, res) => {
   Homecook.findById(req.params.id, (err, editDescription) => {
       if (err) res.send(err);
-      const context = {recipes: editDescription};
+      const context = {homecooks: editDescription};
       res.render("homecooks/edit", context)
   });
 };
@@ -54,11 +63,6 @@ const updateHomecook = (req, res) => {
   );
 };
 
-// View
-const viewHomecook = (req, res) => {
-  const context = db.Homecook.getOne(req.params.id)
-  res.render("homecooks/show", context)
-};
 
 module.exports = {
   index,
@@ -66,5 +70,5 @@ module.exports = {
   showHomecook,
   editHomecook,
   updateHomecook,
-  viewHomecook,
+  createDescription,
 };

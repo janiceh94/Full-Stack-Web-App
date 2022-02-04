@@ -13,9 +13,9 @@ router.get('/homecooks/new', isLoggedIn, homecookCtrl.newDescription);
 
 router.get('/homecooks/:id', isLoggedIn, homecookCtrl.showHomecook);
 
-router.get('/homecooks/edit', isLoggedIn, homecookCtrl.editHomecook);
+router.get('/homecooks/:id/edit', isLoggedIn, homecookCtrl.editHomecook);
 
-router.post("/homecooks", isLoggedIn, homecookCtrl.editHomecook);
+router.post("/homecooks", isLoggedIn, homecookCtrl.createDescription);
 
 router.put('/homecooks/:id', isLoggedIn, homecookCtrl.updateHomecook);
 
