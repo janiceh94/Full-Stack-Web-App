@@ -12,16 +12,18 @@
 			<h3><%= homecook.email %></h3>
 		</div>
 	</br></br></br>
-		<div class="homecook-header-description">
+		<div class="homecook-description">
 			<% if(!homecook.facts) { %>
 				<h3>No description has been made. Add a description!</h3>
 			<% } %>
-			<% homecook.forEach(recipe => { %>
-				<div>
-					<h3><%= homecook.facts %></h3>
-				</div>
-			<% }) %>
+			<% let array = []; %>
+			<% for (let i = 0; i < homecook.length; i++) { %>
+				<li>
+					<h3><%= homecook.facts[i] %></h3>
+				</li>
+			<% }; %>
 		</div>
+		<a href="../homecooks/new"><button class="homecook-buttons">add a description</button></a>
 	</div>
 </body>
 </html>

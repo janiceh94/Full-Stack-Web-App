@@ -6,5 +6,15 @@
 </head>
 <body>
 	<%- include ('../partials/nav.ejs') %>
+	<div class="homecook-name">
+		<h1>Homecook Name</h1>
+	</div>
+	<form action="/homecooks" method="POST">
+		<div class="short-answer">
+			<h3>add a description</h3>
+			<input type="text" name="name" placeholder="put description here">
+		</div>
+		<input type="submit" value="Submit">
+	</form>
 </body>
 </html>

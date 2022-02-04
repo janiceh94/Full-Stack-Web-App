@@ -10,6 +10,15 @@ function index(req, res, next) {
     });
 } 
 
+// New
+const newDescription = (req, res) => {
+  Homecook.find({}, (err, newDescription) => {
+      if (err) res.send (err);
+      const context = {homecooks: newDescription};
+      res.render("homecooks/new", context)
+  });
+};
+
 // Show
 const showHomecook = (req, res) => {
   Homecook.findById(req.params.id, (err, foundHomecook) => {
@@ -53,6 +62,7 @@ const viewHomecook = (req, res) => {
 
 module.exports = {
   index,
+  newDescription,
   showHomecook,
   editHomecook,
   updateHomecook,
