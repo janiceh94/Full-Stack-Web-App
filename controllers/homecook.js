@@ -12,18 +12,16 @@ function index(req, res, next) {
 
 // Show
 const showHomecook = (req, res) => {
-  Homecook.findbyId(req.params.id)
-      .populate("homecooks")
-      .exec((err, foundHomecook) => {
-          if (err) res.send(err);
-          const context = {homecook: foundHomecook};
-          res.render("homecooks/show", context)
+  Homecook.findById(req.params.id, (err, foundHomecook) => {
+    if(err) return res.send(err);
+        const context = {homecook: foundHomecook};
+        res.render('homecooks/show', context);
   })
 } 
 
 // Edit
 const editHomecook = (req, res) => {
-  Homecook.findbyId(req.params.id, (err, editDescription) => {
+  Homecook.findById(req.params.id, (err, editDescription) => {
       if (err) res.send(err);
       const context = {recipes: editDescription};
       res.render("homecooks/edit", context)
@@ -32,7 +30,7 @@ const editHomecook = (req, res) => {
 
 // Update
 const updateHomecook = (req, res) => {
-  Homecook.findbyIdAndUpdate(
+  Homecook.findByIdAndUpdate(
       req.params.id,
       {
           $set: {

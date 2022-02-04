@@ -7,7 +7,7 @@ const recipeSchema = new Schema ({
     photo: {type: String},
     ingredients: {type:String},
     preparation: {type: String},
-    homeCook: {type: Schema.Types.ObjectId, ref: "Homecook"},
+    homecook: {type: Schema.Types.ObjectId, ref: "Homecook"},
 },{
     timestamps: true
 })
