@@ -19,10 +19,14 @@ const idx = (req, res) => {
 
 // New
 const newRecipe = (req, res) => {
+    
     db.Recipe.find({}, (err, foundRecipe) => {
         if (err) res.send (err);
-        const context = {recipes: foundRecipe};
-        res.render("recipes/new", context)
+        const context = {recipe: foundRecipe};
+        res.render("recipes/new", {
+            user: req.user,
+            context,
+        })
     });
 };
 
