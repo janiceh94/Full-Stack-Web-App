@@ -11,7 +11,7 @@ const homecookSchema = new Schema ({
     username: {type: String, required: true},
     email: {type: String},
     biography: {type: String},
-    recipe: {type: Schema.Types.ObjectId, ref: "Recipe"},
+    recipe: [ {type: Schema.Types.ObjectId, ref: "Recipe"} ],
     comments: {type: Schema.Types.ObjectId, ref: "Comment"},
 })
 
