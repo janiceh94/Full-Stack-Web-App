@@ -68,9 +68,9 @@ const updateHomecook = (req, res) => {
 const destroy = (req, res) => {
   Homecook.findByIdAndDelete(req.params.id, (err, deletedHomecook) => {
       if(err) res.send(err);
-
+      console.log(deletedHomecook.googleId)
       db.Recipe.deleteMany(
-        { recipe: deletedHomecook._id},
+        { homecook: deletedHomecook._id},
         (err, deletedRecipes) => {
           if(err) res.send(err);
           res.redirect('/homecooks');

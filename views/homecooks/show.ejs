@@ -13,17 +13,15 @@
 		</div>
 		</br></br>
 		<div class="recipe-collection">
-			<% if (!recipe) { %>
+			<% let homecookList = homecooks.recipe %>
+			<% if (!homecookList) { %>
 			<h1>No recipes have been created. Time to get cookin' !</h1>
 			<% } %>
-			<div class="recipe-card">
-				<% for (i = 0; i < recipe.length; i++) { %>
-					<ul>
-						<li><a href="/recipes/<%= recipe.id %>"><div class="recipe-card"></li>
-					</ul>
-				<% } %>
-			</div>
+			<% for (i = 0; i < homecookList.length; i++) { %>
+				<li><a href="/recipes/<%= homecookList[i] %>"><%= homecookList[i] %></a></li>
+			<% } %>
 		</div>
+			<% console.log(homecookList[1]) %>
 		</br></br>
 		<div class="homecook-description">
 			<% if(!homecooks.biography) { %>
