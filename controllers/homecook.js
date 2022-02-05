@@ -56,9 +56,9 @@ const updateHomecook = (req, res) => {
           },
       },
       {new: true},
-      (err, updatedDescription) => {
+      (err, updatedBiography) => {
           if(err) res.send(err);
-          res.redirect(`/homecooks/${updatedDescription._id}`);
+          res.redirect(`/homecooks/${updatedBiography._id}`);
       }
   );
 };
