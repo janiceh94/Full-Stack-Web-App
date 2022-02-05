@@ -23,7 +23,16 @@
 				</li>
 			<% }; %>
 		</div>
-		<a href="../homecooks/new"><button class="homecook-buttons">add a description</button></a>
+		<ul>
+			<li><a href="../homecooks/new"><button class="homecook-buttons">Add a description!</button></a></li>
+			<li>
+				<div class="deletebtn">
+					<form action="/homecooks/<%= homecooks._id %>?_method=DELETE" method="POST">
+						<input type="submit" value = "Delete">
+					</form>
+				</div>
+			</li>
+		</ul>
 	</div>
 </body>
 </html>
