@@ -10,7 +10,7 @@ const homecookSchema = new Schema ({
     googleId: {type: String},
     username: {type: String, required: true},
     email: {type: String},
-    facts: {type: String},
+    biography: {type: String},
     recipe: {type: Schema.Types.ObjectId, ref: "Recipe"},
     comments: {type: Schema.Types.ObjectId, ref: "Comment"},
 })
