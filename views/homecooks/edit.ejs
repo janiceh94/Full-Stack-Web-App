@@ -6,13 +6,15 @@
 </head>
 <body>
 	<%- include ('../partials/nav.ejs') %>
-	<form action="/recipes/<%= homecook._id%>?_method=PUT" method="POST">
-		<div class="recipe-form">
-			<div class="long-answer">
-				<h3>Add a description about yourself!</h3>
-				<input type="text" name="homecook-description" value="<%=homecook.facts %>">
-			</div>
+	<div class="homecook-name">
+		<h1>Homecook Name</h1>
+	</div>
+	<form action="/homecooks/<%= homecooks._id %>?_method=PUT" method = "POST">
+		<div class="short-answer">
+			<h3>add a description</h3>
+			<input type="text" name="name" value="<%=homecooks.facts%>">
 		</div>
 		<input type="submit" value="Update">
+	</form>
 </body>
 </html>

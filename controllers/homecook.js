@@ -10,29 +10,45 @@ function index(req, res, next) {
     });
 } 
 
+// New
+const newDescription = (req, res) => {
+  Homecook.find({}, (err, newDescription) => {
+      if (err) res.send (err);
+      const context = {homecooks: newDescription};
+      res.render("homecooks/new", context)
+  });
+};
+
+// Create
+
+const createDescription = (req, res) => {
+  Homecook.create(req.body, (err, createDescription) => {
+      if(err) return res.send(err);
+      res.redirect('/homecooks');
+  })
+}
+
 // Show
 const showHomecook = (req, res) => {
-  Homecook.findbyId(req.params.id)
-      .populate("homecooks")
-      .exec((err, foundHomecook) => {
-          if (err) res.send(err);
-          const context = {homecook: foundHomecook};
-          res.render("homecooks/show", context)
+  Homecook.findById(req.params.id, (err, foundHomecook) => {
+    if(err) return res.send(err);
+        const context = {homecooks: foundHomecook};
+        res.render('homecooks/show', context);
   })
 } 
 
 // Edit
 const editHomecook = (req, res) => {
-  Homecook.findbyId(req.params.id, (err, editDescription) => {
+  Homecook.findById(req.params.id, (err, editDescription) => {
       if (err) res.send(err);
-      const context = {recipes: editDescription};
+      const context = {homecooks: editDescription};
       res.render("homecooks/edit", context)
   });
 };
 
 // Update
 const updateHomecook = (req, res) => {
-  Homecook.findbyIdAndUpdate(
+  Homecook.findByIdAndUpdate(
       req.params.id,
       {
           $set: {
@@ -47,16 +63,12 @@ const updateHomecook = (req, res) => {
   );
 };
 
-// View
-const viewHomecook = (req, res) => {
-  const context = db.Homecook.getOne(req.params.id)
-  res.render("homecooks/show", context)
-};
 
 module.exports = {
   index,
+  newDescription,
   showHomecook,
   editHomecook,
   updateHomecook,
-  viewHomecook,
+  createDescription,
 };

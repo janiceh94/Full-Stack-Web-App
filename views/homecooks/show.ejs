@@ -6,5 +6,24 @@
 </head>
 <body>
 	<%- include ('../partials/nav.ejs') %>
+	<div class="homecook-header">
+		<div class = "homecook-header-name">
+			<h1><%= homecooks.name %></h1>
+			<h3><%= homecooks.email %></h3>
+		</div>
+	</br></br></br>
+		<div class="homecook-description">
+			<% if(!homecooks.facts) { %>
+				<h3>No description has been made. Add a description!</h3>
+			<% } %>
+			<% let array = []; %>
+			<% for (let i = 0; i < homecooks.length; i++) { %>
+				<li>
+					<h3><%= homecooks.facts[i] %></h3>
+				</li>
+			<% }; %>
+		</div>
+		<a href="../homecooks/new"><button class="homecook-buttons">add a description</button></a>
+	</div>
 </body>
 </html>
