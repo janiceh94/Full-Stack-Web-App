@@ -32,6 +32,13 @@
 				<p><%= recipe.preparation %></p>
 			</div>
 		</div>
+		<% if(recipe._id.equals(user && user._id)) { %>}
+		<div class='deletebtn'>
+			<form method='POST' action='/recipes/<%= recipe._id%>?_method=DELETE'>
+				<button>Delete Recipe</button>
+			</form>
+		</div>
+		<% } %>
 	</div>
 </body>
 </html>
