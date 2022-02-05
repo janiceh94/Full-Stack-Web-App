@@ -6,8 +6,10 @@
 </head>
 <body>
 	<%- include ('../partials/nav.ejs') %>
-	<div class="homecook-name">
-		<h1>Homecook Name</h1>
+	<div class="homecook-header">
+		<div class = "homecook-header-name">
+			<h1><%= homecooks.name %></h1>
+		</div>
 	</div>
 	<form action="/homecooks" method="POST">
 		<div class="short-answer">
