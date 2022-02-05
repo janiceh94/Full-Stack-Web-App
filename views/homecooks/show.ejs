@@ -11,7 +11,20 @@
 			<h1><%= homecooks.name %></h1>
 			<h3><%= homecooks.email %></h3>
 		</div>
-	</br></br></br>
+		</br></br>
+		<div class="recipe-collection">
+			<% if (!recipe) { %>
+			<h1>No recipes have been created. Time to get cookin' !</h1>
+			<% } %>
+			<div class="recipe-card">
+				<% for (i = 0; i < recipe.length; i++) { %>
+					<ul>
+						<li><a href="/recipes/<%= recipe.id %>"><div class="recipe-card"></li>
+					</ul>
+				<% } %>
+			</div>
+		</div>
+		</br></br>
 		<div class="homecook-description">
 			<% if(!homecooks.biography) { %>
 				<h3>No description has been made. Add a description!</h3>
