@@ -42,7 +42,7 @@ const editHomecook = (req, res) => {
   Homecook.findById(req.params.id, (err, editDescription) => {
       if (err) res.send(err);
       const context = {homecooks: editDescription};
-      res.render("homecooks/edit", context)
+      res.render("/homecooks/edit", context)
   });
 };
 
@@ -63,6 +63,13 @@ const updateHomecook = (req, res) => {
   );
 };
 
+// Destroy
+const destroy = (req, res) => {
+  Homecook.findByIdAndDelete(req.params.id, (err, deleteHomecook) => {
+      if(err) res.send(err);
+      res.redirect('/homecooks');
+  });
+};
 
 module.exports = {
   index,
@@ -71,4 +78,5 @@ module.exports = {
   editHomecook,
   updateHomecook,
   createDescription,
+  deleteHomecook: destroy,
 };
