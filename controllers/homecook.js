@@ -42,7 +42,7 @@ const editHomecook = (req, res) => {
   Homecook.findById(req.params.id, (err, editDescription) => {
       if (err) res.send(err);
       const context = {homecooks: editDescription};
-      res.render("/homecooks/edit", context)
+      res.render("homecooks/edit", context)
   });
 };
 
