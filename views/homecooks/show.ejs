@@ -13,15 +13,10 @@
 		</div>
 	</br></br></br>
 		<div class="homecook-description">
-			<% if(!homecooks.facts) { %>
+			<% if(!homecooks.biography) { %>
 				<h3>No description has been made. Add a description!</h3>
 			<% } %>
-			<% let array = []; %>
-			<% for (let i = 0; i < homecooks.length; i++) { %>
-				<li>
-					<h3><%= homecooks.facts[i] %></h3>
-				</li>
-			<% }; %>
+				<h3><%= homecooks.biography %></h3>
 		</div>
 		<ul>
 			<li>
