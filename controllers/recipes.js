@@ -32,9 +32,16 @@ const newRecipe = (req, res) => {
 
 // Create
 const createRecipe = (req, res) => {
-    db.Recipe.create(req.body, (err, createRecipe) => {
+    db.Recipe.create(req.body, (err, createdRecipe) => {
         if(err) return res.send(err);
-        res.redirect('/recipes');
+
+        db.Homecook.findById(createdRecipe.homecook).exec( function (err, foundHomecook) {
+            if (err) res.send(err);
+            console.log(foundHomecook);
+            foundHomecook.recipe.push(createdRecipe);
+            foundHomecook.save();
+            res.redirect('/recipes');
+        })
     })
 }
 
