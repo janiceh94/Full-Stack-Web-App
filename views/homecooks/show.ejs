@@ -2,31 +2,26 @@
 <html lang="en">
 <head>
 	<%- include ('../partials/head.ejs') %>
-	<title>User Profile</title>
+	<title>Homecook Profile</title>
 </head>
 <body>
 	<%- include ('../partials/nav.ejs') %>
-	<div class="homecook-header">
-		<div class = "homecook-header-name">
+	<div class="homecook-profile">
+		<div class ="homecook-header-name">
 			<h1><%= homecooks.name %></h1>
-			<h3><%= homecooks.email %></h3>
+			<p>Recipes Created: <%= user.recipe.length %></p>
 		</div>
-	</br></br></br>
-		<div class="homecook-description">
+		<h3>biography</h3>
+		<div class="homecook-biography">
 			<% if(!homecooks.biography) { %>
-				<h3>No description has been made. Add a description!</h3>
+				<p>No description has been made. Add a description!</p>
 			<% } %>
-				<h3><%= homecooks.biography %></h3>
+				<p><%= homecooks.biography %></p>
 		</div>
-		<ul>
-			<li>
-				<a href="../homecooks/<%= homecooks._id %>/edit"><button class="homecook-buttons">Add a description!</button></a></li>
-			<li>
-					<form action="/homecooks/<%= homecooks._id %>?_method=DELETE" method="POST">
-						<input type="submit" value = "Delete">
-					</form>
-			</li>
-		</ul>
+		<a href="../homecooks/<%= homecooks._id %>/edit"><h4>edit biography</h4></a>
+		<form id="delete-button" action="/homecooks/<%= homecooks._id %>?_method=DELETE" method="POST">
+			<input type="submit" value = "delete profile">
+		</form>
 	</div>
 </body>
 </html>

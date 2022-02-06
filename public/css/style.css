@@ -1,6 +1,12 @@
 /* === Root Styles === */
 /* Across all pages */
 
+@media only screen and (max-width: 800px) {
+	.homecook-biography {
+		width: 90vW !important;
+	}
+}
+
 :root {
 	--main-blue: #cafdff;
 	--main-black: black;
@@ -15,6 +21,47 @@ body {
 	margin: 0px;
 }
 
+.page-container {
+	padding: 0vw 4vW 0vW 4vW;
+}
+/* Font Styles */
+/* Across all pages */
+
+
+h1 {
+	color: var(--main-red);
+	font-family: hegante, sans-serif;
+	font-size: 3em;
+	text-transform: uppercase;
+	margin-bottom: 5vH;
+	margin-top: 5vH;
+}
+
+h2 {
+	font-family: hegante, sans-serif;
+	font-size: 2.5em;
+	font-variant: small-caps;
+	margin-bottom: 1vW;
+	margin-top: 5vH;
+}
+
+h3 {
+	font-family: hegante, sans-serif;
+	font-size: 2em;
+	font-variant: small-caps;
+	margin-bottom: 1vW;
+	margin-top: 5vH;
+}
+
+h4 {
+	font-family: egizio-urw-condensed, serif;
+	font-size: 1.5em;
+	font-variant: small-caps;
+	color: var(--main-red);
+	margin: 0 0 0 0;
+}
+
+
 p {
 	font-family: egizio-urw-condensed, serif;
 	font-size: 2em;
@@ -22,24 +69,19 @@ p {
 	margin: 0px;
 }
 
-h1 {
-	color: var(--main-red);
-	font-family: hegante, sans-serif;
-	font-size: 3em;
-	text-transform: uppercase;
-	margin-bottom: 0px;
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+li {
+	font-family: egizio-urw-condensed, serif;
+	font-size: 1.5em;
+	list-style-type: none;
 }
 
-
-/* Font Styles */
-/* Across all pages */
-
-h3 {
-	font-family: hegante, sans-serif;
-	font-size: 30px;
-	font-variant: small-caps;
-	margin-bottom: 1vW;
-	margin-top: 0px;
+a, a:hover, a:focus, a:active {
+	text-decoration: none;
+	color: inherit;
 }
 
 /* === Navigation === */
@@ -54,7 +96,7 @@ nav {
 
 .logo-with-bun{ 
 	position: absolute;
-	padding-left: 5vW;
+	padding-left: 4vW;
 	top: 18px;
 	z-index: 10;
 }
@@ -64,9 +106,9 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
-	width: 90vw;
-	padding-left: 5vW;
-	padding-right: 5vW;
+	width: 92vw;
+	padding-left: 4vW;
+	padding-right: 4vW;
 	height: 100px;
 	position: relative;
 	top: 50px;
@@ -202,7 +244,6 @@ button {
 }
 
 input {
-	
 	background-color: transparent;
 	border: solid 1px;
 	margin-bottom: 0px;
@@ -332,16 +373,6 @@ textarea p {
 	margin-bottom: 0px;
 }
 
-ul {
-	list-style: none;
-	padding-left: 0;
-}
-li {
-	font-family: egizio-urw-condensed, serif;
-	font-size: 1.5em;
-	list-style-type: none;
-}
-
 .preparation {
 	width: 60vW;
 	display: flex;
@@ -362,3 +393,119 @@ li {
 	border-left: solid black 1px;
 }
 
+/* === HOMCOOKS === */
+/* === Homecooks Index.ejs === */
+
+#index {
+	background-color: var(--main-black);
+}
+
+.homecook-index {
+	padding: 0vW 4vW 0vW 4vW;
+	height: 100%;
+}
+
+.homecooks-index-header {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.homecooks-index-header h1 {
+	font-size: 5em;
+	color: var(--main-blue);
+}
+
+.homecook-name-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.homecook-names {
+	text-align: center;
+	width: 28vW;
+}
+
+.homecook-names h2 {
+	color: var(--main-blue);
+	margin-top: 1vH;
+}
+
+.homecook-names h2:hover {
+	color: var(--main-red);
+}
+
+/* === Homecooks Show.ejs === */
+
+.homecook-profile {
+	padding: 0vW 4vW 0vW 4vW;
+}
+
+.homecook-header-name h1 {
+	margin-bottom: 0px;
+}
+
+.homecook-biography {
+	margin-top: 0;
+	padding: 1vW;
+	border: solid black 1px;
+	width: 28vW;
+	height: 40vH;
+	overflow: scroll;
+}
+
+.homecook-biography p {
+	font-size: 1.5em;
+}
+
+#delete-button {
+	display: flex;
+	justify-content: flex-start;
+	margin: 5vH 0vH 5vH 0vH;
+	width: 28vW;
+}
+
+
+#delete-button input[type="submit"] {
+	font-family: egizio-urw-condensed, serif;
+	font-size: 1.3em;
+	font-variant: small-caps;
+	width: 150px;
+}
+
+#delete-button input[type="submit"]:hover {
+	color: var(--main-red);
+}
+
+/* === Edit Show.ejs === */
+
+#biography-edit {
+	margin: 5vH 0vH 5vH 0vH;
+	width: 28vW;
+}
+
+#biography-edit input[type="submit"] {
+	font-family: egizio-urw-condensed, serif;
+	font-size: 1.3em;
+	font-variant: small-caps;
+	width: 150px;
+	margin-top: 2vH;
+}
+
+
+#biography-edit input[type="text"] {
+	justify-content: flex-start !important;
+	font-family: egizio-urw-condensed, serif;
+	font-size: 1.5em;
+	margin-top: 0;
+	padding: 1vW;
+	border: solid black 1px;
+	width: 28vW;
+	height: 40vH;
+	overflow: scroll;
+}
+
+#biography-edit input[type="submit"]:hover {
+	color: var(--main-red);
+}
