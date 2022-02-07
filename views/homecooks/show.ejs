@@ -19,6 +19,7 @@
 				<h3><%= homecooks.biography %></h3>
 		</div>
 		<ul>
+			<% if(homecooks._id.equals(user._id)) { %>
 			<li>
 				<a href="../homecooks/<%= homecooks._id %>/edit"><button class="homecook-buttons">Add a description!</button></a></li>
 			<li>
@@ -26,6 +27,7 @@
 						<input type="submit" value = "Delete">
 					</form>
 			</li>
+			<% } %>
 		</ul>
 	</div>
 </body>

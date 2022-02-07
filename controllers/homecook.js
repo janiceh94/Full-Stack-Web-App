@@ -32,7 +32,9 @@ const createDescription = (req, res) => {
 const showHomecook = (req, res) => {
   Homecook.findById(req.params.id, (err, foundHomecook) => {
     if(err) return res.send(err);
-        const context = {homecooks: foundHomecook};
+        const context = {homecooks: foundHomecook,
+        user: req.user
+      };
         res.render('homecooks/show', context);
   })
 } 
