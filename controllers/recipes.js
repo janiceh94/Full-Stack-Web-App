@@ -11,9 +11,15 @@ Index - GET - /recipe - Show all recipes
 // Index
 const idx = (req, res) => {
     db.Recipe.find({}, (err, foundRecipes) => {
-        if (err) res.send(err);
-        const context = {recipes: foundRecipes};
-        res.render("recipes/index", context)
+        if (err) res.send(err); 
+        db.Homecook.find({}, (err, foundHomecooks) => {
+            if(err) res.send(err);
+            res.render('recipes/index', {
+                recipes: foundRecipes,
+                homecook: foundHomecooks,
+                user: req.user,
+            });
+        });
     });
 };
 
