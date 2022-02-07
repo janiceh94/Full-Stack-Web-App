@@ -11,7 +11,18 @@
 			<h1><%= homecooks.name %></h1>
 			<h3><%= homecooks.email %></h3>
 		</div>
-	</br></br></br>
+		</br></br>
+		<div class="recipe-collection">
+			<% let homecookList = homecooks.recipe %>
+			<% if (!homecookList) { %>
+			<h1>No recipes have been created. Time to get cookin' !</h1>
+			<% } %>
+			<% for (i = 0; i < homecookList.length; i++) { %>
+				<li><a href="/recipes/<%= homecookList[i] %>"><%= homecookList[i] %></a></li>
+			<% } %>
+		</div>
+			<% console.log(homecookList[1]) %>
+		</br></br>
 		<div class="homecook-description">
 			<% if(!homecooks.biography) { %>
 				<h3>No description has been made. Add a description!</h3>
