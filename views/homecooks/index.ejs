@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
 	<%- include ('../partials/head.ejs') %>
-	<title>User Index</title>
+	<title>Homecook Index</title>
 </head>
-<body>
+<body id="index">
 	<%- include ('../partials/nav.ejs') %>
-	<div class="user-profile">
-		<div class="user-description">
-			<div class="user-header">
-				<h1><large>All Homecooks</large></h1>
+	<div class="homecook-index">
+		<div class="homecooks-index-header">
+			<h1>bunbuns homecooks</h1>
+		</div>
+		<div class="homecook-name-list">
+		<% homecooks.forEach(homecooks => { %>	
+			<div class="homecook-names">		
+				<a href="/homecooks/<%= homecooks.id %>"><h2><%= homecooks.name %></h2></a>
 			</div>
-			<% homecooks.forEach(homecooks => { %>
-				<a href="/homecooks/<%= homecooks.id %>"><div class="homecook"></div>
-					<div class="recipe-description">
-						<div class="recipe-card-top">
-							<h3><%= homecooks.name %></h3>
-						</div>
-					</div>
-				</div>
-			<% }) %>
+		<% }) %>
+		<div class="homecook-names">
+			<h2>ampy</h2>
+		</div>
+		<div class="homecook-names">
+			<h2>janice</h2>
+		</div>
+		</div>
 	</div>
 </body>
 </html>

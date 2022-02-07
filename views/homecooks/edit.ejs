@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
 	<%- include ('../partials/head.ejs') %>
-	<title>Edit User Profile</title>
+	<title>Edit Homecook Profile</title>
 </head>
 <body>
 	<%- include ('../partials/nav.ejs') %>
-	<div class="homecook-name">
-		<h1>Homecook Name</h1>
-	</div>
-	<form action="/homecooks/<%= homecooks._id %>?_method=PUT" method = "POST">
-		<div class="short-answer">
-			<h3>add a description</h3>
-			<input type="text" name="biography" value="<%=homecooks.biography%>">
+	<div class="page-container">
+		<div class ="homecook-header-name">
+			<h1><%= homecooks.name %></h1>
+			<p>Recipes Created: <%= user.recipe.length %></p>
 		</div>
-		<input type="submit" value="Update">
-	</form>
+		<form id="biography-edit" action="/homecooks/<%= homecooks._id %>?_method=PUT" method = "POST">
+			<div class="short-answer">
+				<h3>biography</h3>
+				<input type="text" name="biography" value="<%=homecooks.biography%>">
+			</div>
+			<input type="submit" value="update">
+		</form>
+	</div>
 </body>
 </html>

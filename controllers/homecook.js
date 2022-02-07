@@ -1,4 +1,5 @@
 const Homecook = require("../models/Homecook")
+const db = require("../models")
 
 // Google oath
 function index(req, res, next) {
@@ -43,7 +44,9 @@ const showHomecook = (req, res) => {
 const editHomecook = (req, res) => {
   Homecook.findById(req.params.id, (err, editDescription) => {
       if (err) res.send(err);
-      const context = {homecooks: editDescription};
+      const context = {
+        homecooks: editDescription,
+        user: req.user,};
       res.render("homecooks/edit", context)
   });
 };
@@ -67,9 +70,16 @@ const updateHomecook = (req, res) => {
 
 // Destroy
 const destroy = (req, res) => {
-  Homecook.findByIdAndDelete(req.params.id, (err, deleteHomecook) => {
+  Homecook.findByIdAndDelete(req.params.id, (err, deletedHomecook) => {
       if(err) res.send(err);
-      res.redirect('/homecooks');
+      console.log(deletedHomecook.googleId)
+      db.Recipe.deleteMany(
+        { homecook: deletedHomecook._id},
+        (err, deletedRecipes) => {
+          if(err) res.send(err);
+          res.redirect('/homecooks');
+        }
+      )
   });
 };
 
