@@ -43,7 +43,6 @@ const createRecipe = (req, res) => {
 
         db.Homecook.findById(createdRecipe.homecook).exec( function (err, foundHomecook) {
             if (err) res.send(err);
-            console.log(foundHomecook);
             foundHomecook.recipe.push(createdRecipe);
             foundHomecook.save();
             res.redirect('/recipes');
@@ -55,7 +54,9 @@ const createRecipe = (req, res) => {
 const show = (req, res) => {
     db.Recipe.findById(req.params.id, (err, foundRecipe) => {
         if(err) return res.send(err);
-        const context = {recipe: foundRecipe};
+        const context = {recipe: foundRecipe,
+            user: req.user,
+        };
         res.render('recipes/show', context);
     })
 }
