@@ -49,7 +49,9 @@ const createRecipe = (req, res) => {
 const show = (req, res) => {
     db.Recipe.findById(req.params.id, (err, foundRecipe) => {
         if(err) return res.send(err);
-        const context = {recipe: foundRecipe};
+        const context = {recipe: foundRecipe,
+            user: req.user,
+        };
         res.render('recipes/show', context);
     })
 }
