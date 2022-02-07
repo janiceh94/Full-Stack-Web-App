@@ -478,7 +478,7 @@ textarea p {
 	color: var(--main-red);
 }
 
-/* === Edit Show.ejs === */
+/* === Edit.ejs === */
 
 #biography-edit {
 	margin: 5vH 0vH 5vH 0vH;
@@ -508,4 +508,29 @@ textarea p {
 
 #biography-edit input[type="submit"]:hover {
 	color: var(--main-red);
+}
+
+/* === Homecook Show.ejs === */
+
+#delete-button {
+	display: flex;
+	justify-content: flex-start;
+	margin: 5vH 0vH 5vH 0vH;
+	width: 28vW;
+}
+
+
+#delete-button input[type="submit"] {
+	font-family: egizio-urw-condensed, serif;
+	font-size: 1.3em;
+	font-variant: small-caps;
+	width: 150px;
+}
+
+#delete-button input[type="submit"]:hover {
+	color: var(--main-red);
+}
+
+.edit-biography {
+
 }
