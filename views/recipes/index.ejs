@@ -20,7 +20,7 @@
 						<h3><%= recipe.name %></h3>
 						<p><%= recipe.yield %></p>
 					</div>
-					<% homecook.forEach((homecook, idx)  => { %>
+					<% homecook.forEach(homecook=> { %>
 						<% if (homecook._id.equals(recipe.homecook)) { %>
 							<div class="recipe-card-bottom">
 								<p><%= homecook.name %></p>
