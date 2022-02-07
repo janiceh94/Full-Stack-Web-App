@@ -84,7 +84,12 @@ const update = (req, res) => {
 const destroy = (req, res) => {
     db.Recipe.findByIdAndDelete(req.params.id, (err, deletedRecipe) => {
         if(err) res.send(err);
-        res.redirect('/recipes');
+
+        db.Homecook.findById(deletedRecipe.homecook).exec(function (err, foundHomecook) {
+            foundHomecook.recipe.remove(deletedRecipe);
+            foundHomecook.save();
+            res.redirect('/recipes');
+        });
     });
 };
 
