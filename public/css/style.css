@@ -13,6 +13,8 @@
 	--main-red: #ff0000;
 }
 
+
+
 /* Body Styles */
 /* Across all pages */
 
@@ -334,11 +336,17 @@ textarea::placeholder {
 
 .recipe-card {
 	height: 28vW;
+	min-width: 250px;
+	min-height: 250px;
 	width: 27vW;
 	overflow: hidden;
 	background-color: var(--main-blue);
 	padding: 1vW;
 	margin-top: 3vW;
+}
+
+.recipe-card-top h3 {
+	margin-top: 0px;
 }
 
 .recipe-image {

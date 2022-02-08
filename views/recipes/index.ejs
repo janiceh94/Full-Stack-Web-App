@@ -18,7 +18,7 @@
 				<div class="recipe-description">
 					<div class="recipe-card-top">
 						<h3><%= recipe.name %></h3>
-						<p><%= recipe.yield %></p>
+						<p>servings: <%= recipe.yield %></p>
 					</div>
 					<% homecook.forEach(homecook=> { %>
 						<% if (homecook._id.equals(recipe.homecook)) { %>
