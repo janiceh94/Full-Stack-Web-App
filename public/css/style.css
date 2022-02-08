@@ -26,6 +26,7 @@ body {
 .page-container {
 	padding: 0vw 4vW 0vW 4vW;
 }
+
 /* Font Styles */
 /* Across all pages */
 
@@ -471,8 +472,8 @@ input[type="text"] {
 }
 .recipe-body {
 	display: flex;
-	margin-left: 3vW;
-	margin-right: 3vW;
+	margin-left: 4vW;
+	margin-right: 4vW;
 	justify-content: space-between;
 }
 
@@ -517,6 +518,7 @@ input[type="text"] {
 
 .homecook-index {
 	padding: 0vW 4vW 0vW 4vW;
+	min-height: 90vH;
 	height: 100%;
 }
 
