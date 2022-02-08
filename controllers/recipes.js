@@ -65,7 +65,7 @@ const show = (req, res) => {
 const edit = (req, res) => {
     db.Recipe.findById(req.params.id, (err, foundRecipe) => {
         if (err) res.send(err);
-        const context = {recipe: foundRecipes};
+        const context = {recipe: foundRecipe};
         res.render("recipes/edit", context)
     });
 };

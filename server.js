@@ -1,6 +1,7 @@
 require("dotenv").config()
 // External Modules
 const express = require('express');
+const morgan = require('morgan');
 const methodOverride = require('method-override');
 const session = require("express-session");
 const passport = require("passport");
@@ -23,6 +24,7 @@ app.set('view engine', 'ejs');
 //app.use("/", routes.index);
 app.use(express.static("public"));
 app.use(express.json());
+app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"))
     // Body-Parsing Middleware
