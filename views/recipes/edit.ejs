@@ -14,7 +14,6 @@
 		<div class="recipe-header-small-details">
 
 			<% homecook.forEach(homecook=> { %>
-				<% console.log(recipe)%>
 				<% if (recipe.homecook.equals(homecook._id)) { %>
 			<p><%= homecook.name %></p>
 			<p><%= recipe.timestamps %></p>
