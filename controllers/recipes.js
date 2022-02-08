@@ -54,12 +54,16 @@ const createRecipe = (req, res) => {
 const show = (req, res) => {
     db.Recipe.findById(req.params.id, (err, foundRecipe) => {
         if(err) return res.send(err);
-        const context = {recipe: foundRecipe,
-            user: req.user,
-        };
-        res.render('recipes/show', context);
-    })
-}
+        db.Homecook.find({}, (err, foundHomecooks) => {
+            if(err) res.send(err);
+            res.render('recipes/show', {
+                recipe: foundRecipe,
+                homecook: foundHomecooks,
+                user: req.user,
+            });
+        });
+    });
+};
 
 //Edit
 const edit = (req, res) => {
