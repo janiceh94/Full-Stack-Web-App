@@ -373,9 +373,8 @@ textarea::placeholder {
 
 .recipe-header {
 	display: flex;	
-	margin-left: 3vW;
-	margin-right: 3vW;
-	margin-top: 2vW;
+	margin-left: 4vW;
+	margin-right: 4vW;
 }
 
 .recipe-header-name {
@@ -384,16 +383,44 @@ textarea::placeholder {
 }
 
 .recipe-header-name h1 {
-	margin-top: 0px;
+	margin-top: 2vW;
+	margin-bottom: 0vW;
 }
 
 .recipe-header-small-details {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	text-align: right;
 	width: 30vW;
 }
 
+.edit-delete-btns {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column-reverse;
+}
+
+.edit-delete-btns h4 {
+	color: var(--main-black);
+}
+
+.edit-delete-btns h4:hover {
+	color: var(--main-red);
+}
+
+#recipe-delete-button {
+	font-family: egizio-urw-condensed, serif;
+	font-size: 1.5em;
+	font-variant: small-caps;
+	color: var(--main-black);
+	margin: 0 0 0 0;
+	padding: 0px;
+}
+
+#recipe-delete-button:hover {
+	color: var(--main-red);
+}
 .recipe-body {
 	display: flex;
 	margin-left: 3vW;
