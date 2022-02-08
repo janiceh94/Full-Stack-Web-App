@@ -11,10 +11,16 @@
 			<h1><%= recipe.name %></h1>
 			<p><%= recipe.yield %></p>
 		</div>
+			<% homecook.forEach(homecook=> { %>
+				<% console.log(recipe)%>
+				<% if (recipe.homecook.equals(homecook._id)) { %>
 		<div class="recipe-header-small-details">
-			<p><%= recipe.homeCook %></p>
+			<p><%= homecook.name %></p>
 			<p><%= recipe.timestamps %></p>
 		</div>
+		<% } %>
+			<% }) %>
+
 	</div>
 	<div class="recipe-body">
 		<div class="ingredients">
