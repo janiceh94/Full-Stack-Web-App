@@ -108,6 +108,48 @@ input[type="submit"]:hover {
 	color: var(--main-red);
 }
 
+/* === Footer === */
+
+footer {
+	background-color: var(--main-black);
+	margin-top: 4vW;
+	padding: 4vW;
+	width: 92vW;
+}
+
+.footer-style{
+	display: flex;
+	justify-content: space-between;
+
+}
+
+footer h3 {
+	color: var(--main-blue);
+	margin-top: 0px;
+}
+
+footer p {
+	color: var(--main-blue);
+	margin: 0px;
+	padding: 0px;
+}
+
+.creator-names {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 40vW;
+	text-align: left;
+}
+
+.contact-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 50vW;
+	text-align: right;
+}
+
 /* === Navigation === */
 /* Navigation Spacing */
 
@@ -256,7 +298,7 @@ button {
 /* name and number of recipes */
 
 .homecook-name {
-	margin-left: 3vW;
+	margin-left: 4vW;
 	margin-bottom: 3vW;
 }
 
@@ -275,16 +317,14 @@ input {
 	background-color: transparent;
 	border: solid 1px;
 	margin-bottom: 0px;
-	padding: 10px 10px 7px 10px;
+	padding: 10px 10x 7px 10px;
 	width: 28vW;
 }
 
 ::placeholder {
 	color: black;
 	font-family: egizio-urw-condensed, serif;
-	font-size: 2em;
 	font-variant: small-caps;
-	padding: 0px;
 }
 
 /* long answer */
@@ -318,7 +358,15 @@ textarea::placeholder {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin: 0vW 3vW 0vW 3vW;
+	margin: 0vW 4vW 0vW 4vW;
+}
+
+input[type="text"] {
+	color: black;
+	font-family: egizio-urw-condensed, serif;
+	font-size: 2em;
+	font-variant: small-caps;
+	padding: 0px 10px 0px 10px;
 }
 
 /* === index.ejs Style === */
