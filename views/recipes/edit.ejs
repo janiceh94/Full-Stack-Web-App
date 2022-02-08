@@ -11,10 +11,9 @@
 			<h1><%= recipe.name %></h1>
 			<p>Servings: <%= recipe.yield %></p>
 		</div>
+		<% console.log(recipe) %>
 		<div class="recipe-header-small-details">
-
 			<% homecook.forEach(homecook=> { %>
-				<% console.log(recipe)%>
 				<% if (recipe.homecook.equals(homecook._id)) { %>
 			<p><%= homecook.name %></p>
 			<p><%= recipe.timestamps %></p>
@@ -36,13 +35,13 @@
 				<h3>recipe name</h3>
 				<input type="text" name="recipe-name" value="<%=recipe.name %>">
 				<h3>yield</h3>
-				<input type="text" name="yield" placeholder="<%=recipe.yield %>">
+				<input type="text" name="yield" value="<%=recipe.yield %>">
 				<h3>photo</h3>
-				<input type="text" name="photo" placeholder="<%=recipe.photo %>">
+				<input type="text" name="photo" value="<%=recipe.photo %>">
 			</div>
 			<div class="long-answer">
 				<h3>ingredients</h3>
-				<textarea type="text" name="ingredients"><%=recipe.instructions %></textarea>
+				<textarea type="text" name="ingredients"><%=recipe.ingredients %></textarea>
 			</div>
 			<div class="long-answer">
 				<h3>preparation</h3>
