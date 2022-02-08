@@ -84,6 +84,28 @@ a, a:hover, a:focus, a:active {
 	color: inherit;
 }
 
+textarea:focus {
+	outline: none !important;
+	border-color: var(--main-red);
+}
+ 
+input:focus {
+	outline: none !important;
+	border-color: var(--main-red);
+}
+
+input[type="submit"] {
+	font-family: egizio-urw-condensed, serif;
+	font-size: 1.3em;
+	font-variant: small-caps;
+	width: 150px;
+	margin-top: 2vH;
+}
+
+input[type="submit"]:hover {
+	color: var(--main-red);
+}
+
 /* === Navigation === */
 /* Navigation Spacing */
 
@@ -236,6 +258,10 @@ button {
 	margin-bottom: 3vW;
 }
 
+.homecook-name h1 {
+	margin-bottom: 0;
+}
+
 /* form styles */
 /* short answer */
 
@@ -271,13 +297,19 @@ textarea {
 	height: 40vH;
 	padding: 10px;
 	width: 28vW;
+	font-family: egizio-urw-condensed, serif;
+	font-size: 2em;
+	font-variant: small-caps;
+	padding: 0vW 1vW 0vW 1vW;
+
 }
 
-textarea p {
+textarea::placeholder {
 	color: black;
 	font-family: egizio-urw-condensed, serif;
 	font-size: 2em;
 	padding: 0px;
+	font-variant: none;
 }
 
 .recipe-form {
@@ -478,7 +510,7 @@ textarea p {
 	color: var(--main-red);
 }
 
-/* === Edit Show.ejs === */
+/* === Edit.ejs === */
 
 #biography-edit {
 	margin: 5vH 0vH 5vH 0vH;
@@ -504,8 +536,35 @@ textarea p {
 	width: 28vW;
 	height: 40vH;
 	overflow: scroll;
+	background-color: white;
 }
 
 #biography-edit input[type="submit"]:hover {
 	color: var(--main-red);
 }
+
+.edit-text-field{ 
+	background-color: white;
+}
+
+/* === Homecook Show.ejs === */
+
+#delete-button {
+	display: flex;
+	justify-content: flex-start;
+	margin: 5vH 0vH 5vH 0vH;
+	width: 28vW;
+}
+
+
+#delete-button input[type="submit"] {
+	font-family: egizio-urw-condensed, serif;
+	font-size: 1.3em;
+	font-variant: small-caps;
+	width: 150px;
+}
+
+#delete-button input[type="submit"]:hover {
+	color: var(--main-red);
+}
+

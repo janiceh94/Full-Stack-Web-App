@@ -8,7 +8,7 @@
   <%- include ('../partials/nav.ejs') %>
 	<div class="homecook-name">
 		<h1><%= user.name %></h1>
-		<p><%= user.recipe.length %></p>
+		<p>Recipes created: <%= user.recipe.length %></p>
 	</div>
 	<form action="/recipes" method="POST">
 		<div class="recipe-form">
@@ -28,9 +28,9 @@
 				<h3>preparation</h3>
 				<textarea name="preparation">methods, preparations, & recipe notes...</textarea>
 			</div>
+			<input type="hidden" name="homecook" value="<%= user._id %>">
+			<input type="submit" value="create">
 		</div>
-		<input type="hidden" name="homecook" value="<%= user._id %>">
-		<input type="submit" value="Submit">
 	</form>
 </body>
 </html>
