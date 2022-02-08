@@ -6,6 +6,30 @@
 </head>
 <body>
 	<%- include ('../partials/nav.ejs') %>
+	<div class="recipe-header">
+		<div class="recipe-header-name">
+			<h1><%= recipe.name %></h1>
+			<p>Servings: <%= recipe.yield %></p>
+		</div>
+		<div class="recipe-header-small-details">
+
+			<% homecook.forEach(homecook=> { %>
+				<% console.log(recipe)%>
+				<% if (recipe.homecook.equals(homecook._id)) { %>
+			<p><%= homecook.name %></p>
+			<p><%= recipe.timestamps %></p>
+		<% } %>
+			<% }) %>
+		<% if(recipe.homecook.equals(user._id)) { %>
+			<div class='edit-delete-btns'>
+				<form method='POST' action='/recipes/<%= recipe._id%>?_method=DELETE'>
+					<button id="recipe-delete-button">delete recipe</button>
+				</form>
+				<a href="../recipes/<%= recipe._id %>/edit"><h4>edit recipe</h4></a>
+			</div>
+		<% } %>
+		</div>
+	</div>
 	<form action="/recipes/<%= recipe._id%>?_method=PUT" method="POST">
 		<div class="recipe-form">
 			<div class="short-answer">
